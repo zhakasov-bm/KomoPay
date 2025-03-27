@@ -19,7 +19,7 @@ function App() {
       <Home />
       <FeatureList />
       <About />
-      <Services id="services" />
+      <Services />
       <Partners />
       <Advantages />
       <Contact />
