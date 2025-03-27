@@ -13,7 +13,7 @@ function About() {
             <div className="about-cards">
                 <img src="/about/1.svg" alt="about-image-1" />
                 <img src="/about/2.svg" alt="" />
-                <img src="/about/3.pdf" alt="" />
+                <img src="/about/3.svg" alt="" />
             </div>
         </section>
     )
