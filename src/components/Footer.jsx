@@ -1,5 +1,5 @@
 import React from "react";
-import "/Users/bekzhan/Desktop/web/komo-pay/src/Footer.css";
+import "../Footer.css";
 import { scrollToSection } from "../scrollToSection";
 
 const Footer = () => {
