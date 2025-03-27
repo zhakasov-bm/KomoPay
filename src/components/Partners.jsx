@@ -1,24 +1,24 @@
 import React from "react";
 
 const partnersLogos = [
-    "public/partners/air-peace.svg",
-    "public/partners/filmHouse.svg",
-    "public/partners/piggyvest.svg",
-    "public/partners/air-peace.svg",
-    "public/partners/air-peace.svg",
-    "public/partners/air-peace.svg",
-    "public/partners/air-peace.svg",
-    "public/partners/air-peace.svg",
-    "public/partners/air-peace.svg",
-    "public/partners/air-peace.svg",
-    "public/partners/air-peace.svg",
-    "public/partners/air-peace.svg",
-    "public/partners/air-peace.svg",
-    "public/partners/air-peace.svg",
-    "public/partners/air-peace.svg",
-    "public/partners/air-peace.svg",
-    "public/partners/filmHouse.svg",
-    "public/partners/piggyvest.svg"
+    "/partners/air-peace.svg",
+    "/partners/filmHouse.svg",
+    "/partners/piggyvest.svg",
+    "/partners/air-peace.svg",
+    "/partners/air-peace.svg",
+    "/partners/air-peace.svg",
+    "/partners/air-peace.svg",
+    "/partners/air-peace.svg",
+    "/partners/air-peace.svg",
+    "/partners/air-peace.svg",
+    "/partners/air-peace.svg",
+    "/partners/air-peace.svg",
+    "/partners/air-peace.svg",
+    "/partners/air-peace.svg",
+    "/partners/air-peace.svg",
+    "/partners/air-peace.svg",
+    "/partners/filmHouse.svg",
+    "/partners/piggyvest.svg"
 ];
 
 function Partners() {

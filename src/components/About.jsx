@@ -11,9 +11,9 @@ function About() {
                 </p>
             </div>
             <div className="about-cards">
-                <img src="src/assets/about-1.svg" alt="" />
-                <img src="src/assets/about-2.svg" alt="" />
-                <img src="src/assets/about-3.svg" alt="" />
+                <img src="./about-1.svg" alt="" />
+                <img src="./about-2.svg" alt="" />
+                <img src="./about-3.pdf" alt="" />
             </div>
         </section>
     )
