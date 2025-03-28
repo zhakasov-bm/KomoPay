@@ -554,6 +554,10 @@ input::placeholder {
   .card-content img {
     width: 150px;
   }
+
+  .card-content p {
+    font-size: 16px;
+  }
   
   .partners-logo {
     grid-template-columns: repeat(2, 1fr);
