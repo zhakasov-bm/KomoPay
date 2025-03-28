@@ -8,7 +8,7 @@ function Services() {
     <section id="service">
       <div className="card-title">
         <h2>Наши сервисы</h2>
-        <span>Быстро, безопасно и удобно — всё, что нужно для приема и отправки платежей</span>
+        <p>Быстро, безопасно и удобно — всё, что нужно для приема и отправки платежей</p>
       </div>
       <div className="card-container">
         {services.map((card) => (

@@ -450,7 +450,7 @@ input::placeholder {
   }
 
   p {
-    font-size: 16px;;
+    font-size: 18px;;
   }
 
   .burger-menu {
@@ -536,10 +536,6 @@ input::placeholder {
   .about-header {
     flex-direction: column;
     gap: 24px;
-  }
- 
-  .about-header p {
-    font-size: 16px;
   }
   
   .about-cards {
