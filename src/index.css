@@ -311,8 +311,10 @@ span {
 #partners {
   flex-direction: column;
   padding: 40px 0;
+  overflow: hidden;
 }
 
+/* Default grid layout for DESKTOP */
 .partners-logo {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -321,6 +323,7 @@ span {
   margin: 0 auto;
 }
 
+/* Logo styling */
 .partners-logo img {
   width: 100%;
   max-width: 120px;
@@ -519,9 +522,9 @@ input::placeholder {
     flex-wrap: nowrap;
   }
 
-  .features-wrapper:hover {
-    animation-play-state: paused; /* Pause animation on hover */
-  }
+  /* .features-wrapper:hover {
+    animation-play-state: paused; 
+  } */
 
   .feature-card {
     flex: 0 0 auto;
@@ -562,7 +565,25 @@ input::placeholder {
   }
   
   .partners-logo {
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    gap: 50px;
+    animation: slide 15s linear infinite; /* Enable scrolling animation on mobile */
+    width: max-content;
+    padding-top: 40px;
+  }
+
+  .partners-logo img {
+    max-width: 200px;
+    height: 45px;
+  }
+
+  @keyframes slide {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
   }
 
   #home, #advantages, #contact {
