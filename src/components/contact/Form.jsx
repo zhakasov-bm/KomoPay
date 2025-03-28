@@ -1,77 +1,51 @@
-import React, { useState } from "react";
+import React from "react";
 
 function Form() {
-    const [formData, setFormData] = useState({
-        name: "",
-        phone: "",
-        email: "",
-    });
+    const onSubmit = async (event) => {
+        event.preventDefault();
+        const formData = new FormData(event.target);
+    
+        formData.append("access_key", "5ad1bd5f-b606-4450-ae6e-0630ebca9a84");
 
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData((prev) => ({ ...prev, [name]: value }));
-    };
+        const object = Object.fromEntries(formData);
+        const json = JSON.stringify(object);
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
+        try {
+            const res = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    Accept: "application/json"
+                },
+                body: json
+            });
 
-        emailjs.sendForm(
-            "service_i9ad4tx",   // Your EmailJS service ID
-            "template_eudzbtu",  // Your EmailJS template ID
-            e.target, 
-            "UIL_CeMVzw9G75tLc"  // Your EmailJS public key
-        )
-        .then(() => {
-            alert("Форма успешно отправлена!");
-            setFormData({ name: "", phone: "", email: "" }); // Reset form
-        })
-        .catch(() => {
-            alert("Ошибка при отправке формы. Попробуйте снова.");
-        });
+            const data = await res.json();
+
+            if (data.success) {
+                alert("Форма успешно отправлена!"); // Show success alert
+                event.target.reset(); // Clear the form fields
+            } else {
+                alert("Ошибка отправки, попробуйте снова.");
+            }
+        } catch (error) {
+            alert("Ошибка сети, попробуйте позже.");
+        }
     };
 
     return (
-        <form className="form" onSubmit={handleSubmit}>
-            <InputField 
-                type="text" 
-                name="name" 
-                placeholder="Ваше имя" 
-                value={formData.name} 
-                onChange={handleChange} 
-            />
-            <InputField 
-                type="tel" 
-                name="phone" 
-                placeholder="Номер телефона" 
-                pattern="^\+?[0-9\s\-\(\)]{7,15}$" 
-                value={formData.phone} 
-                onChange={handleChange} 
-            />
-            <InputField 
-                type="email" 
-                name="email" 
-                placeholder="Ваш e-mail" 
-                value={formData.email} 
-                onChange={handleChange} 
-            />
+        <form className="form" onSubmit={onSubmit}>
+            <div className="input-box">
+                <input type="text" className="field" name="name" placeholder="Ваше имя" required />
+            </div>
+            <div className="input-box">
+                <input type="tel" className="field" name="phone" placeholder="Номер телефона" pattern="^\+?[0-9\s\-\(\)]{7,15}$" required />
+            </div>
+            <div className="input-box">
+                <input type="email" className="field" name="email" placeholder="Ваш e-mail" required />
+            </div>
             <button className="home-btn" type="submit">Отправить</button>
         </form>
-    );
-}
-
-// Reusable Input Field Component
-function InputField({ type, name, placeholder, value, onChange, pattern }) {
-    return (
-        <input 
-            type={type} 
-            name={name} 
-            className="input" 
-            placeholder={placeholder} 
-            value={value} 
-            onChange={onChange} 
-            pattern={pattern} 
-            required 
-        />
     );
 }
 
