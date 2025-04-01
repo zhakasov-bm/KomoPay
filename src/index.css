@@ -311,13 +311,14 @@ span {
 #partners {
   flex-direction: column;
   padding: 40px 0;
+  margin-bottom: 140px;
   overflow: hidden;
 }
 
 /* Default grid layout for DESKTOP */
 .partners-logo {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 80px;
   justify-content: center;
   margin: 0 auto;
@@ -326,8 +327,8 @@ span {
 /* Logo styling */
 .partners-logo img {
   width: 100%;
-  max-width: 120px;
-  height: 32px;
+  max-width: 140px;
+  height: 40px;
 }
 
 /* Advantages Section */

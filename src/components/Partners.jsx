@@ -1,24 +1,13 @@
 import React from "react";
 
 const partnersLogos = [
-    "/partners/air-peace.svg",
-    "/partners/filmHouse.svg",
-    "/partners/piggyvest.svg",
-    "/partners/air-peace.svg",
-    "/partners/air-peace.svg",
-    "/partners/air-peace.svg",
-    "/partners/air-peace.svg",
-    "/partners/air-peace.svg",
-    "/partners/air-peace.svg",
-    "/partners/air-peace.svg",
-    "/partners/air-peace.svg",
-    "/partners/air-peace.svg",
-    "/partners/air-peace.svg",
-    "/partners/air-peace.svg",
-    "/partners/air-peace.svg",
-    "/partners/air-peace.svg",
-    "/partners/filmHouse.svg",
-    "/partners/piggyvest.svg"
+    "/partners/yandex.svg",
+    "/partners/rbk.svg",
+    "/partners/jusan.svg",
+    "/partners/simply.svg",
+    "/partners/turing.svg",
+    "/partners/bope.svg",
+    "/partners/parking.svg"
 ];
 
 function Partners() {
